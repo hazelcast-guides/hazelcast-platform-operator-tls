@@ -18,7 +18,7 @@ In this tutorial, you'll do the following:
 
 - Deploy Management Center to monitor your Hazelcast cluster.
 
-- Connect to you cluster using TLS to encrypt member to client network traffic.
+- Connect to your cluster using TLS to encrypt member to client network traffic.
 
 
 == Before you Begin
