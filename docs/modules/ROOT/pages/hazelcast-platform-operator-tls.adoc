@@ -27,7 +27,7 @@ Before starting this tutorial, make sure that you meet the following prerequisit
 
 * Up and running https://kubernetes.io/[Kubernetes] cluster
 * Kubernetes command-line tool, https://kubernetes.io/docs/tasks/tools/#kubectl[kubectl]
-* Deployed xref:operator:ROOT:index.adoc[Hazelcast Platform Operator]
+* Deployed xref:operator:ROOT:index.adoc[Hazelcast Platform Operator version 5.8 or above]
 * OpenSSL command-line tool, https://www.openssl.org/[openssl]
 
 == Step 1. Create Kubernetes Secret with TLS certificate and key
