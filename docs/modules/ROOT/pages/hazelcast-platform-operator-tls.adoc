@@ -66,7 +66,7 @@ include::ROOT:example$/hazelcast.yaml[]
 EOF
 ----
 +
-. Run the following commands to check cluster status
+. Run the following commands to check cluster status and fetch external IPs of the cluster:
 +
 [source, shell]
 ----
