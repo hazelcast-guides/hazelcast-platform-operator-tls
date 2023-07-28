@@ -32,7 +32,7 @@ Before starting this tutorial, make sure that you meet the following prerequisit
 
 == Step 1. Create Kubernetes Secret with TLS certificate and key
 
-. Generate TLS certyfcate and key in PEM format using OpenSSL
+. Generate TLS certificate and key in PEM format using OpenSSL
 +
 [source, shell]
 ----
