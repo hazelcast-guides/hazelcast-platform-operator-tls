@@ -8,5 +8,6 @@ spec:
   tls:
     secretName: example
   exposeExternally:
-    type: Unisocket
+    type: Smart
     discoveryServiceType: LoadBalancer
+    memberAccess: LoadBalancer
