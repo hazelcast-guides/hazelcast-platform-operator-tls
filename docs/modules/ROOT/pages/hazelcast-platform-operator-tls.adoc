@@ -77,7 +77,9 @@ hazelcast   Running   3/3       172.18.254.1:5701    172.18.254.1:5710
 
 == Step 3. Deploy Management Center
 
-Apply the Management Center custom resource
+Enabling TLS for a Hazelcast cluster adds an essential layer of security to protect data during communication. When TLS is enabled, all clients, including the Management Center, must be configured with the appropriate TLS certificates to establish a secure connection with the Hazelcast cluster.
+
+Apply the Management Center custom resource:
 
 [source, yaml]
 ----
@@ -88,11 +90,20 @@ EOF
 
 == Step 4. Connect to Hazelcast cluster over TLS
 
-Configure the Hazelcast client with the TLS certificate.
+. Clone the examples repository:
++
+[source, shell]
+----
+git clone https://github.com/hazelcast-guides/hazelcast-platform-operator-tls.git
+cd hazelcast-platform-operator-tls
+----
++
+The sample code for this tutorial is in the link:{github-directory}/tree/master/docs/modules/ROOT/examples[`docs/modules/ROOT/examples/`] directory.
 
+. Configure the Hazelcast client with the TLS certificate:
++
 [tabs]
 ====
-
 Java::
 +
 --
@@ -101,7 +112,6 @@ Java::
 include::ROOT:example$/java/src/main/java/com/hazelcast/example.java[]
 ----
 --
-
 NodeJS::
 +
 --
@@ -110,7 +120,6 @@ NodeJS::
 include::ROOT:example$/nodejs/example.js[]
 ----
 --
-
 Go::
 +
 --
@@ -119,7 +128,6 @@ Go::
 include::ROOT:example$/go/example.go[]
 ----
 --
-
 Python::
 +
 --
@@ -128,12 +136,56 @@ Python::
 include::ROOT:example$/python/example.py[]
 ----
 --
+====
 
+. Build and run the Hazelcast client example:
++
+[tabs]
+====
+Java::
++
+--
+[source, bash]
+----
+cd java
+mvn package
+java -jar target/*.jar
+----
+--
+NodeJS::
++
+--
+[source, bash]
+----
+cd nodejs
+npm install
+npm start
+----
+--
+Go::
++
+--
+[source, bash]
+----
+cd go
+go run example.go
+----
+--
+Python::
++
+--
+[source, bash]
+----
+cd python
+pip install -r requirements.txt
+python example.py
+----
+--
 ====
 
 == Step 5. Clean Up
 
-To clean up the created resources remove the all Custom Resources and secrets.
+To clean up the created resources remove the all Custom Resources and secrets:
 
 [source, shell]
 ----
