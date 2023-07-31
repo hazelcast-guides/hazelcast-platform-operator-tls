@@ -16,6 +16,9 @@ content:
   - url: .
     branches: master
     start_paths: docs
+  - url: .
+    branches: HEAD
+    start_path: docs
 ui: 
   bundle:
     url: https://github.com/hazelcast/hazelcast-docs-ui/releases/latest/download/ui-bundle.zip
