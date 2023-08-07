@@ -98,12 +98,24 @@ git clone https://github.com/hazelcast-guides/hazelcast-platform-operator-tls.gi
 cd hazelcast-platform-operator-tls
 ----
 +
-The sample code for this tutorial is in the link:{github-directory}/tree/master/docs/modules/ROOT/examples[`docs/modules/ROOT/examples/`] directory.
+The sample code(excluding CLC) for this tutorial is in the link:{github-directory}/tree/master/docs/modules/ROOT/examples[`docs/modules/ROOT/examples/`] directory.
 
 . Configure the Hazelcast client with the TLS certificate:
 +
 [tabs]
 ====
+CLC::
++
+--
+NOTE: Before using CLC, it should be installed in your system. Check the installation instructions for CLC: xref:clc:ROOT:install-clc.adoc[].
+
+Run the following command for adding the cluster config to the CLC.
+
+[source, shell]
+----
+clc config add hz cluster.name=dev cluster.address=<EXTERNAL-IP> ssl.enabled=true ssl.server=example ssl.ca-path=<PATH/TO/example.crt>
+----
+
 Java::
 +
 --
@@ -142,6 +154,28 @@ include::ROOT:example$/python/example.py[]
 +
 [tabs]
 ====
+
+CLC::
++
+--
+Run the following command to fill a map.
+
+[source, shell]
+
+----
+for i in {1..10};
+do
+   clc -c hz map set --name map key-$i value-$i;
+done
+----
+Run the following command to check the map size.
+
+[source, shell]
+----
+clc -c hz map size --name map
+
+----
+
 Java::
 +
 --
