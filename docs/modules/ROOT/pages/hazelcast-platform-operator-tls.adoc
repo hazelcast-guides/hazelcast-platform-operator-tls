@@ -158,21 +158,9 @@ include::ROOT:example$/python/example.py[]
 CLC::
 +
 --
-Run the following command to fill a map.
-
-[source, shell]
-
-----
-for i in {1..10};
-do
-   clc -c hz map set --name map key-$i value-$i;
-done
-----
-Run the following command to check the map size.
-
 [source, shell]
 ----
-clc -c hz map size --name map
+clc -c hz map size
 
 ----
 
