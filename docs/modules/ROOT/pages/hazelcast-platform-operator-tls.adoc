@@ -115,6 +115,7 @@ Run the following command for adding the cluster config to the CLC.
 ----
 clc config add hz cluster.name=dev cluster.address=<EXTERNAL-IP> ssl.enabled=true ssl.server=example ssl.ca-path=<PATH/TO/example.crt>
 ----
+--
 
 Java::
 +
@@ -163,6 +164,7 @@ CLC::
 clc -c hz map size
 
 ----
+--
 
 Java::
 +
