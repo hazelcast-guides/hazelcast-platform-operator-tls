@@ -80,11 +80,12 @@ hazelcast   Running   3/3
 [source, shell]
 ----
 kubectl get hazelcastendpoint --selector="app.kubernetes.io/instance=hazelcast"
-NAME          TYPE        ADDRESS
-hazelcast     Discovery   35.184.21.18:5701
-hazelcast-0   Member      35.188.131.33:5701
-hazelcast-1   Member      34.122.242.55:5701
-hazelcast-2   Member      35.194.44.37:5701
+NAME            TYPE        ADDRESS
+hazelcast       Discovery   35.184.21.18:5701
+hazelcast-0     Member      35.188.131.33:5701
+hazelcast-1     Member      34.122.242.55:5701
+hazelcast-2     Member      35.194.44.37:5701
+hazelcast-wan   WAN         35.184.21.18:5710
 ----
 
 == Step 3. Deploy Management Center
