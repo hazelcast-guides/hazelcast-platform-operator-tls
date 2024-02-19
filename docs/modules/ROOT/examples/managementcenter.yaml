@@ -7,7 +7,7 @@ spec:
   externalConnectivity:
     type: LoadBalancer
   hazelcastClusters:
-    - address: hazelcast
+    - address: my-hazelcast
       name: dev
       tls:
         secretName: example
