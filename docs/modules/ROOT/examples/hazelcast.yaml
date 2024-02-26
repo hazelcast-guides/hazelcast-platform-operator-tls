@@ -1,7 +1,7 @@
 apiVersion: hazelcast.com/v1alpha1
 kind: Hazelcast
 metadata:
-  name: hazelcast
+  name: my-hazelcast
 spec:
   clusterSize: 3
   licenseKeySecretName: hazelcast-license-key
