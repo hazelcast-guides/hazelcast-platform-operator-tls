@@ -27,7 +27,7 @@ Before starting this tutorial, make sure that you meet the following prerequisit
 
 * Up and running https://kubernetes.io/[Kubernetes] cluster
 * Kubernetes command-line tool, https://kubernetes.io/docs/tasks/tools/#kubectl[kubectl]
-* Deployed xref:operator:ROOT:index.adoc[Hazelcast Platform Operator version 5.8 or above]
+* Deployed xref:operator:ROOT:get-started.adoc[Hazelcast Platform Operator version 5.8 or above]
 * OpenSSL command-line tool, https://www.openssl.org/[openssl]
 
 == Step 1. Create Kubernetes Secret with TLS certificate and key
@@ -103,7 +103,7 @@ EOF
 
 == Step 4. Connect to Hazelcast cluster over TLS
 
-. Clone the examples repository:
+. Clone the examples repository to access all sample clients:
 +
 [source, shell]
 ----
@@ -111,7 +111,7 @@ git clone https://github.com/hazelcast-guides/hazelcast-platform-operator-tls.gi
 cd hazelcast-platform-operator-tls
 ----
 +
-The sample code(excluding CLC) for this tutorial is in the link:{github-directory}/tree/master/docs/modules/ROOT/examples[`docs/modules/ROOT/examples/`] directory.
+The sample code(excluding CLC) for this tutorial is in the link:https://github.com/hazelcast-guides/hazelcast-platform-operator-tls/tree/master/docs/modules/ROOT/examples[`docs/modules/ROOT/examples/`] directory.
 
 . Configure the Hazelcast client with the TLS certificate:
 +
