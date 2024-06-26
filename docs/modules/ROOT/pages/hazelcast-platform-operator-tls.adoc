@@ -3,7 +3,6 @@
 :page-product: operator
 :page-categories: Cloud Native
 :page-lang: go, java
-:page-enterprise: true
 :page-est-time: 10 mins
 :description: Learn how to secure Hazelcast cluster with TLS and Hazelcast Kubernetes Operator.
 
