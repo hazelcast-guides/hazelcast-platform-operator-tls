@@ -42,10 +42,13 @@ openssl req -x509 -sha256 -nodes -days 3650 -subj '/CN=example' -addext "subject
 +
 [source, shell]
 ----
-kubectl create secret tls example --cert=example.crt --key=example.key
+kubectl create secret generic example \
+  --from-file=tls.crt=example.crt \
+  --from-file=tls.key=example.key
 ----
 +
-NOTE: In production setup it is advised to use tools like https://cert-manager.io/[cert-manager] to manage your certificates.
+
+NOTE: You can also set `ca.crt` to create truststore. For more information please check xref:operator:ROOT:tls.adoc[TLS].
 
 == Step 2. Deploy Hazelcast cluster with TLS
 
