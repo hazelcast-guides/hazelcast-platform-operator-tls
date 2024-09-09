@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hazelcast/hazelcast-go-client"
 	"github.com/hazelcast/hazelcast-go-client/cluster"
 )
 
@@ -13,8 +12,7 @@ func main() {
 	clusterConfig.Network.SetAddresses("<EXTERNAL-IP>")
 	clusterConfig.Discovery.UsePublicIP = true
 	clusterConfig.Network.SSL.Enabled = true
-	clusterConfig.Network.SSL.ServerName = "example"
-	clusterConfig.Network.SSL.SetCAPath("example.crt")
+	clusterConfig.Network.SSL.SetTLSConfig(&tls.Config{InsecureSkipVerify: true})
 
 	ctx := context.Background()
 	config := hazelcast.Config{Cluster: clusterConfig}
