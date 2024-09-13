@@ -48,7 +48,7 @@ kubectl create secret generic example \
 ----
 +
 
-NOTE: You can also set `ca.crt` to create truststore. For more information please check xref:operator:ROOT:tls.adoc[TLS].
+NOTE: You can also set `ca.crt` to create a truststore. For more information, see xref:operator:ROOT:tls.adoc[TLS].
 
 == Step 2. Deploy Hazelcast cluster with TLS
 
