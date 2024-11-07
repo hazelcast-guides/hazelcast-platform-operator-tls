@@ -1,8 +1,8 @@
 module hazelcast/hazelcast-platform-operator-tls/go
 
-go 1.20
+go 1.23
 
-require github.com/hazelcast/hazelcast-go-client v1.4.1
+require github.com/hazelcast/hazelcast-go-client v1.4.2
 
 require (
 	github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d // indirect
