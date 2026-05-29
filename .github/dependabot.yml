@@ -1,0 +1,32 @@
+version: 2
+updates:
+  - package-ecosystem: gomod
+    directory: /docs/modules/ROOT/examples/go
+    target-branch: master
+    schedule:
+      interval: weekly
+      day: monday
+  - package-ecosystem: maven
+    directory: /docs/modules/ROOT/examples/java
+    target-branch: master
+    schedule:
+      interval: weekly
+      day: monday
+  - package-ecosystem: npm
+    directory: /docs/modules/ROOT/examples/nodejs
+    target-branch: master
+    schedule:
+      interval: weekly
+      day: monday
+  - package-ecosystem: pip
+    directory: /docs/modules/ROOT/examples/python
+    target-branch: master
+    schedule:
+      interval: weekly
+      day: monday
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: master
+    schedule:
+      interval: weekly
+      day: monday
